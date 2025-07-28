@@ -63,5 +63,3 @@ Mais do que guardar meu progresso, esse repositório é uma forma de mostrar min
 Ao finalizar o curso e enviar o projeto final, conquistei meu certificado oficial da Rocketseat — uma conquista que reforça meu compromisso em seguir aprendendo e crescendo na área de tecnologia.
 
 ---
-
-Se quiser que eu gere uma imagem de banner estilizada com seu nome, visual moderno e o título do curso, é só me pedir. Dá pra deixar esse README ainda mais bonito! 😄
