@@ -15,7 +15,7 @@ Comecei explorando **HTML** e **CSS**, criando páginas estruturadas e estilizad
 
 Também me aprofundei no uso do **Git** e do **GitHub**, aprendi a versionar meu código, trabalhar com branches e publicar meus projetos de forma organizada e profissional.
 
-🔗 Confira tudo isso aqui: [emersonromana.github.io/rocketseat](https://emersonromana.github.io/rocketseat/)
+🔗 Confira tudo isso aqui: [emersonromana.github.io/rocketseat](https://emersonromana.github.io/rocketseat/projeto/index.html)
 
 ---
 
