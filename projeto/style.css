@@ -41,6 +41,7 @@
 body {
     /* Shorthand Background (background: color image repeat position / size) nessa ordem funcionou e com a barra antes do size, por que no Curso em Video não conseguiu fazer da certe e tiravamos o size e fazia por fora em baixo. */
     background: var(--background) no-repeat top center/cover;
+    height: 100vh;
     /* Aqui coloco a imagem de fundo, coloco para ela não repetir em varias imagens, eu alinho a imagem como top para o eixo X e o centro Y e uso o size para propriedade de alinhamento de tamanho que alinha com o tamanho da tela. */
 }
 
@@ -51,10 +52,12 @@ body * {   /* Nesse seletor está selecionando tudo que está dentro do body */
 
 /* Seletor para tamanho e alinhamento do Conteúdo */
 #container {  
-    width: 360px;  /* Largura */
-    height: 712px; /* Altura */ 
+    width: 100%;
+    max-width: 588px;
+    min-height: 100vh; /* Altura */ 
     margin: 56px auto 0;  /* distancia 50px do top entre o container e body, centralização x (horizontal, auto é para os dois lados) e 0 no bottom (em baixo) para não desalinhar com o projeto no figma, que já tem suas medidas.*/
     padding: 0 24px; /* Serve para colocar o espaçamento como no projeto nas laterais, para não perder as propriedades e valores do projeto pelo figma. Aqui preenchemos as laterais e não colocamos borda no top e nem no fundo. */ 
+
 }
 
 
@@ -93,11 +96,16 @@ body * {   /* Nesse seletor está selecionando tudo que está dentro do body */
     left: 0;
     z-index: 1;
     transform: translateY(-50%);
+    animation: slide-back 0.4s;
 }
 
 .light #switch button {
-    right: 0;
-    left: initial;
+    animation: slide-in 0.4s forwards;
+
+}
+
+#switch button:hover {
+    outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -166,4 +174,41 @@ footer {
     padding: 24px 0;
     text-align: center;
     font-size: 14px;
+}
+
+/* Quando a tela for menor que 588px */
+@media (max-width: 588px) {
+    #container {
+        max-width: 360px;
+    }
+}
+
+@media (min-whidth: 700px) {
+    :root {
+        --background: url('./assets/bg-desktop.jpg');
+    }
+
+    .light {
+        --background: url('./assets/bg-desktop-light.jpg');
+    }
+}
+
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slide-back {
+    from {
+        left: 50%;
+    }
+
+    to {
+        left: 0;
+    }
 }
