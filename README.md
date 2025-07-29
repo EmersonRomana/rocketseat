@@ -1,3 +1,5 @@
+![Preview do Projeto](https://github.com/EmersonRomana/rocketseat/blob/main/projeto/assets/preview.png?raw=true)
+
 # 🚀 Discover – Rocketseat
 
 Bem-vindo ao meu repositório! Aqui estão reunidos todos os exercícios, anotações e projetos que desenvolvi durante o curso **Discover da Rocketseat**, uma trilha que me ajudou a construir uma base sólida em desenvolvimento web desde os primeiros passos.
@@ -33,6 +35,7 @@ Também me aprofundei no uso do **Git** e do **GitHub**, aprendi a versionar meu
 
 | Ferramenta     | Finalidade                           |
 |----------------|---------------------------------------|
+| Figma          | Design do Projeto a ser seguido       |
 | HTML           | Estrutura de páginas web              |
 | CSS            | Design e layout responsivo            |
 | JavaScript     | Lógica e interatividade               |
