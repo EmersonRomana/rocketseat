@@ -2,6 +2,7 @@
 
 # 🚀 Discover – Rocketseat
 
+
 Bem-vindo ao meu repositório! Aqui estão reunidos todos os exercícios, anotações e projetos que desenvolvi durante o curso **Discover da Rocketseat**, uma trilha que me ajudou a construir uma base sólida em desenvolvimento web desde os primeiros passos.
 
 ---
@@ -13,6 +14,8 @@ Durante essa formação, aprendi muito mais do que apenas código. Entendi como 
 Comecei explorando **HTML** e **CSS**, criando páginas estruturadas e estilizadas com atenção à semântica e à acessibilidade. Depois mergulhei no **JavaScript**, entendendo lógica de programação, manipulando o DOM e trazendo interatividade para meus projetos.
 
 Também me aprofundei no uso do **Git** e do **GitHub**, aprendi a versionar meu código, trabalhar com branches e publicar meus projetos de forma organizada e profissional.
+
+🔗 Confira tudo isso aqui: <a href="https://emersonromana.github.io/rocketseat/projeto/index.html" target="_blank">emersonromana.github.io/rocketseat</a>
 
 ---
 
