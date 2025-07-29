@@ -2,6 +2,8 @@
 
 # 🚀 Discover – Rocketseat
 
+🔗 Confira tudo isso aqui: [emersonromana.github.io/rocketseat](https://emersonromana.github.io/rocketseat/)
+
 Bem-vindo ao meu repositório! Aqui estão reunidos todos os exercícios, anotações e projetos que desenvolvi durante o curso **Discover da Rocketseat**, uma trilha que me ajudou a construir uma base sólida em desenvolvimento web desde os primeiros passos.
 
 ---
