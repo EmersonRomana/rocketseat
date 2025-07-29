@@ -1,4 +1,4 @@
-![Preview do Projeto](https://github.com/EmersonRomana/rocketseat/blob/main/projeto/assets/preview.png?raw=true)
+![Preview do Projeto](https://github.com/EmersonRomana/rocketseat/blob/main/projeto/github/preview.png)
 
 # 🚀 Discover – Rocketseat
 
