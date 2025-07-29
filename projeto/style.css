@@ -6,6 +6,32 @@
 * {
     margin: 0; 
     padding: 0;
+
+    /* Remover o highlight (realce de toque) "quadrado azul transparente" que aparece ao tocar em links ou botões no celular */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-focus-ring-color: transparent;
+    outline: none;
+}
+
+
+:root {
+    --text-color: white;
+    --background: url(assets/bg-mobile.jpg);
+    --stroker-color: rgba(255, 255, 255, 0.5);
+    --surf-color: rgba(255, 255, 255, 0.1);
+    --surface-color-hover: rgba(255, 255, 255, 0.05);
+    --highlight-color: rgba(255, 255, 255, 0.20);
+    --switch-bg-url: url(assets/MoonStars.svg);
+}
+
+.light {
+    --text-color: black;
+    --background: url(assets/bg-mobile-light.jpg);
+    --stroker-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(0, 0, 0, 0.10);
+    --switch-bg-url: url(assets/Sun.svg);
 }
 
 
@@ -14,13 +40,13 @@
 /* Body (corpo) */
 body {
     /* Shorthand Background (background: color image repeat position / size) nessa ordem funcionou e com a barra antes do size, por que no Curso em Video não conseguiu fazer da certe e tiravamos o size e fazia por fora em baixo. */
-    background: url(assets/bg-mobile.jpg) no-repeat top center/cover;
+    background: var(--background) no-repeat top center/cover;
     /* Aqui coloco a imagem de fundo, coloco para ela não repetir em varias imagens, eu alinho a imagem como top para o eixo X e o centro Y e uso o size para propriedade de alinhamento de tamanho que alinha com o tamanho da tela. */
 }
 
 body * {   /* Nesse seletor está selecionando tudo que está dentro do body */ 
     font-family: "Inter", sans-serif; /* Adiciona a fonte inter que foi pega no google fonts e o sans serif é sem serif */
-    color: white; /* Cor da fonte das letras */ 
+    color: var(--text-color); /* Cor da fonte das letras */ 
 }
 
 /* Seletor para tamanho e alinhamento do Conteúdo */
@@ -28,8 +54,11 @@ body * {   /* Nesse seletor está selecionando tudo que está dentro do body */
     width: 360px;  /* Largura */
     height: 712px; /* Altura */ 
     margin: 56px auto 0;  /* distancia 50px do top entre o container e body, centralização x (horizontal, auto é para os dois lados) e 0 no bottom (em baixo) para não desalinhar com o projeto no figma, que já tem suas medidas.*/
+    padding: 0 24px; /* Serve para colocar o espaçamento como no projeto nas laterais, para não perder as propriedades e valores do projeto pelo figma. Aqui preenchemos as laterais e não colocamos borda no top e nem no fundo. */ 
 }
 
+
+/* Profile */
 #profile { /* Esse seletor está atribuindo todas as propriedades aos seus filhos */
     text-align: center;  /* nessa propriedade eu atribuo que os "inline" fique centralizados. */
     padding: 24px;  /* Espaçamento dentro do conteúdo */
@@ -41,7 +70,100 @@ body * {   /* Nesse seletor está selecionando tudo que está dentro do body */
 }
 
 #profile p { /* Este seletor está selecionando a tag p (parágrafo para atribuir essa propriedades) */
-    font-weight: 500;  /* O peso do texto */ 
+    font-weight: 600;  /* O peso do texto */ 
     line-height: 24px; /* 150%  ---  Essa propriedade é altura da linha  */
     margin-top: 8px; /* Afastamento do parágrafo da img */ 
+}
+
+/* Switchs */
+#switch {
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+
+#switch button {
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    top: 50%;
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.light #switch button {
+    right: 0;
+    left: initial;
+}
+
+#switch span {
+    display: block;
+    height: 24px;
+    background-color: var(--surface-color);
+    border: 1px solid var(--stroker-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+
+/* Links - Listas */
+ul { /* Aqui selecionamos o pai das listas com o SELETOR */
+    list-style: none; /* E com essa PROPRIEDADE nós tiramos os marcadores de lista que ficam na frente */
+    display: flex; /* Organizador dos elementos */
+    flex-direction: column; /* Empilha os botões em cima do outro */
+    gap: 16px; /* Espaçamento entro os links */
+    padding: 24px 0; /* Espaçamento superior e inferior */ 
+}
+
+ul li a {
+    display: flex; /* Organizador de caixas */
+    padding: 16px 24px; /* Espaço dentro do conteudo, como se fosse um enchimento */ 
+    align-items: center; /* Alinha os itens na vertical */ 
+    justify-content: center;  /* Alinha os itens ao centro na horizontal */ 
+    background-color: var(--surface-color); /*Cor do fundo dos botões */
+    border: 1px solid var(--stroker-color); /* Criando a borda dos botões */
+    border-radius: 8px; /* Arredonda a borda em 8px */
+    backdrop-filter: blur(4px); /* Borra o fundo do botão para dar um efeito de glass borrado. */
+    -webkit-backdrop-filter: blur(4px); /* Usa a mesma propriedade cima mas com -webkit- Que é usada para os navegadores que não aceitam essa PROPRIEDADE */
+    text-decoration: none; /* Para tirar a linha em baixo por ter usado link */
+    font-weight: 500; /* Peso da letra */ 
+    transition: background 0.2s; /* Suaviza a velocidade da mudança do background na velocidade */
+}
+
+ul li a:hover {
+    background-color: var(--surface-color-hover);  /* Muda o fundo dps botões ao passar o cursor */
+    border: 1.5px solid var(--text-color); /* Efeito de cursor deixando mais branco e a borda maior */
+}
+
+/*  Social Links */
+#links-social {
+    display: flex; /* Coloca os icones em organização */
+    justify-content: center; /* Alinha ao centro na horizontalmente */ 
+    padding: 24px 0; /* Espaçamento em cima e 0 nas laterais */
+    font-size: 24px; /* Tamanho dos Icones */ 
+}
+
+
+#links-social a { /* Esse seletor está organizando com o flex, alinhando o padding que vai ter no hover para alinhar ao centro, justify está alinhando na horizontal transition da efeito de leveza no passar do mouse e border-radios é para arredondar o padding no hover. */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    transition: background 0.2s;
+    border-radius: 50%;
+}
+
+
+#links-social a:hover { /* Esse Seletor está colocando as propriedades de cor de fundo quando passa o mouse. */
+    background-color: var(--highlight-color);   
+}
+
+footer {
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
 }
